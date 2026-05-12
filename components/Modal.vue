@@ -23,7 +23,6 @@
             </q-btn>
           </div>
           <div v-show="!HideActions" v-for="action in visibleActions" :key="action.label" class="col-12 q-py-xs-xs q-px-md-xs col-md">
-            {{ action }}
             <q-btn class="full-width" dense :label="action.label" :color="action.color" :icon="action.icon" :disable="action.disable"
               @click="action.fn">
             </q-btn>
