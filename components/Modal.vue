@@ -1,7 +1,7 @@
 <template>
   <q-dialog backdrop-filter="blur(4px) contrast(40%)" :full-width="FullWidth" @hide="hideFn" @show="showFn"
     :persistent="Persistent" v-model="show">
-    <q-card style="min-width: 360px">
+    <q-card :style="`min-width: ${Width ?? '360px'};`">
       <q-toolbar class="full-width bg-teal text-white">
         <q-avatar v-if="!!Icon">
           <q-icon :name="Icon"></q-icon>
@@ -44,7 +44,8 @@ export default {
     Data: Object,
     HideActions: Boolean,
     modelValue: Boolean,
-    FullWidth: Boolean
+    FullWidth: Boolean,
+    Width: String
   },
 
   data() {
