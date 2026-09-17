@@ -1,6 +1,6 @@
 <template>
   <Card :Title="Title" :Icon="Icon" :HeaderBgColor="headerBgColor" :HeaderTextColor="headerTextColor" dense
-    class="q-ma-sm">
+    NoFooterActions class="q-ma-sm">
     <template #actions>
       <slot name="actions"></slot>
     </template>
